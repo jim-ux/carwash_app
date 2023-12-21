@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import pe.devteam.carwash.CarWashApplication;
 import pe.devteam.carwash.entities.UserEntity;
 import pe.devteam.carwash.models.UserModel;
+import pe.devteam.carwash.utils.CrytoPassword;
 import pe.devteam.carwash.utils.EasyAlert;
 
 import java.io.IOException;
@@ -34,6 +35,7 @@ public class LoginController {
 
         Image picture = new Image(CarWashApplication.class.getResourceAsStream("images/coche.png"));
         imvLogin.setImage(picture);
+
     }
 
     @FXML
@@ -53,16 +55,27 @@ public class LoginController {
                 return;
             }
 
-            UserModel userModel = new UserModel();
-            UserEntity userEntity = userModel.GetUser(userName, password);
 
-            if(userEntity == null){
+            UserModel userModel = new UserModel();
+            UserEntity userEntity = userModel.GetUser(userName);
+
+            if(userEntity.getUserName() == null){
 
                 EasyAlert alert = new EasyAlert("Usuario no encontrado", "Verifique los campos ingresados, por favor.", Alert.AlertType.ERROR);
                 alert.Show();
 
             }else{
-                this.OpenMainWindow();
+
+                if(CrytoPassword.checkPassword(password, userEntity.getPassword())){
+
+                    this.OpenMainWindow();
+
+                }else{
+
+                    EasyAlert alert = new EasyAlert("Error de contraseña", "Verifique sus credenciales e ingrese de nuevo", Alert.AlertType.ERROR);
+                    alert.Show();
+                }
+
             }
 
         }catch (Exception ex){
@@ -70,6 +83,8 @@ public class LoginController {
         }
 
     }
+
+
 
     private void OpenMainWindow() throws IOException {
 
