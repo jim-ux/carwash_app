@@ -18,6 +18,7 @@ import pe.devteam.carwash.utils.EasyAlert;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.logging.Logger;
 
 public class LoginController {
 
@@ -80,6 +81,7 @@ public class LoginController {
 
         }catch (Exception ex){
             ex.printStackTrace();
+            Logger logger = Logger.getLogger("pe.devteam.carwash");
         }
 
     }

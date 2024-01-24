@@ -1,7 +1,5 @@
 package pe.devteam.carwash.utils;
 
-import io.github.cdimascio.dotenv.Dotenv;
-
 public class Constants {
 
     //private static final Dotenv dotenv = Dotenv.load();
