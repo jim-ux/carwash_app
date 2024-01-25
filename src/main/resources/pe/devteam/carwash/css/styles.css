@@ -1,0 +1,197 @@
+*{
+    /*UI COLORS*/
+    -fx-violet-50: #fcf2ff;
+    -fx-violet-100: #fae3ff;
+    -fx-violet-200: #f5c7ff;
+    -fx-violet-300: #f09bff;
+    -fx-violet-400: #e85fff;
+    -fx-violet-500: #d924ff;
+    -fx-violet-600: #c404fc; /*MAIN COLOR*/
+    -fx-violet-700: #a300cd;
+    -fx-violet-800: #8701a7;
+    -fx-violet-900: #710887;
+    -fx-violet-950: #4c005d;
+
+    /*BACKGROUND*/
+    -fx-bg: #292524;
+
+    /*SHADOWS*/
+    -fx-shadow: dropshadow(three-pass-box, rgba(0,0,0,0.2), 2, 0, 0, 3);
+
+
+}
+
+.font-h1{
+    -fx-font-size: 40px;
+    -fx-font-weight: 700;
+}
+
+/*COMPONENTS*/
+
+.date-picker{
+    -fx-background-color: transparent;
+}
+
+.date-picker .arrow-button{
+    -fx-background-color: -fx-violet-500;
+    -fx-text-fill: white;
+}
+
+.date-picker .arrow-button .arrow{
+    -fx-background-color: white;
+}
+
+.date-picker-popup{
+    -fx-border-width: 0;
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+}
+
+.date-picker-popup > .month-year-pane {
+    -fx-padding: 10px;
+    -fx-background-color: -fx-violet-900;
+    -fx-text-background-color: white;
+    -fx-font-size: 15px;
+}
+
+.date-picker-popup > * > .spinner > .button {
+    -fx-background-color: transparent;
+    /*-fx-color: transparent;*/
+    /*-fx-background-radius: 0;*/
+}
+.date-picker-popup > * > .spinner > .button:focused {
+    -fx-background-color: -fx-violet-500;
+    -fx-color: -fx-hover-base;
+
+}
+.date-picker-popup > * > .spinner > .button:hover {
+    -fx-color: -fx-hover-base;
+}
+
+/*DATE CELL*/
+.date-picker-popup > .calendar-grid {
+    -fx-background-color: -fx-bg;
+
+}
+
+/*ENCABEZADO DE DÍAS*/
+.date-picker-popup > * > .day-name-cell,
+.date-picker-popup > * > .week-number-cell {
+    -fx-text-fill: white;
+}
+
+/*DIAS*/
+.date-picker-popup > * > .day-cell {
+    /*-fx-padding: 0.333333em 0.583333em 0.333333em 0.583333em; !* 4 7 4 7 *!*/
+
+    -fx-border-width: 1px;
+    -fx-border-color: transparent;
+    -fx-font-size: 15px;
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-background-radius: 9999px;
+}
+
+.date-picker-popup > * > .today {
+    -fx-border-width: 1px;
+    -fx-border-color: -fx-violet-500;
+    -fx-border-radius: 9999px;
+
+}
+/*HOVER ON DAY*/
+.date-picker-popup > * > .day-cell:hover,
+.date-picker-popup > * > .selected,
+.date-picker-popup > * > .previous-month.selected,
+.date-picker-popup > * > .next-month.selected {
+    -fx-background-color: -fx-violet-300;
+    -fx-text-fill: -fx-violet-950;
+}
+
+.table-view{
+    -fx-border-width: 0px;
+    -fx-background-color: transparent;
+    -fx-effect: -fx-shadow;
+    -fx-text-background-color: white;
+}
+
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {
+    -fx-background-color: -fx-violet-600;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+}
+
+.table-view .column-header-background .nested-column-header .table-column .label .text{
+    -fx-fill: white;
+
+}
+
+/*Celdas*/
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 10px 10px;
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
+}
+
+.table-row-cell:even{
+    -fx-background-color: -fx-violet-950;
+
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-violet-900;
+}
+
+.table-row-cell:selected{
+    -fx-background-color: -fx-sunarp-sky;
+}
+
+
+
+.button{
+    -fx-text-fill: white;
+    -fx-font-weight: 500;
+    -fx-effect: -fx-shadow;
+    -fx-background-radius: 5px;
+    -fx-padding: 7px 10px;
+    -fx-font-size: 15px;
+}
+
+.button:hover{
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.text-field{
+    -fx-background-color: -fx-violet-800;
+    -fx-font-size: 15px;
+    -fx-padding: 7px;
+    -fx-effect: -fx-shadow;
+    -fx-text-fill: white;
+}
+
+
+/*CUSTOM CLASSES*/
+.main-pane{
+    /*-fx-background-color: linear-gradient(to top, -fx-violet-800, -fx-violet-500);*/
+    -fx-background-color: -fx-bg;
+    -fx-font-family: Dubai;
+}
+
+.input-label{
+    -fx-text-fill: white;
+    -fx-font-weight: 500;
+    -fx-font-size: 15px;
+}
+
+.default-button{
+    -fx-background-color: -fx-violet-800;
+}
+
+.add-button{
+    -fx-background-color: -fx-violet-800;
+}
+

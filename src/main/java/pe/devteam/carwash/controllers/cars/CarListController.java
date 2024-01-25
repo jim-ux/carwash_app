@@ -111,6 +111,8 @@ public class CarListController {
                 }
             });
 
+
+
             return row ;
 
         });
@@ -131,7 +133,7 @@ public class CarListController {
     private void openUpdateView(CarEntity car, int index) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(CarWashApplication.class.getResource("cars-views/car-update-view.fxml"));
         Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root, 350, 400);
+        Scene scene = new Scene(root, 400, 500);
         Stage stage = new Stage();
         stage.setResizable(false);
         stage.setTitle("Actualizar datos");
@@ -165,7 +167,7 @@ public class CarListController {
 
         FXMLLoader fxmlLoader = new FXMLLoader(CarWashApplication.class.getResource("cars-views/car-create-view.fxml"));
         Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root, 350, 400);
+        Scene scene = new Scene(root, 400, 500);
         Stage stage = new Stage();
         stage.setResizable(false);
         stage.setTitle("Añadir datos");

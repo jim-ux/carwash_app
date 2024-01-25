@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane prefHeight="600.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.devteam.carwash.controllers.oilchanges.OilChangeListController">
+<AnchorPane prefHeight="600.0" prefWidth="775.0" styleClass="main-pane" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.devteam.carwash.controllers.oilchanges.OilChangeListController">
    <children>
-      <TableView fx:id="tbvChanges" layoutX="60.0" layoutY="94.0" prefHeight="483.0" prefWidth="695.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+      <TableView fx:id="tbvChanges" layoutX="60.0" layoutY="94.0" prefHeight="483.0" prefWidth="695.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
         <columns>
           <TableColumn fx:id="tbcId" prefWidth="75.0" text="Código" />
           <TableColumn fx:id="tbcDate" prefWidth="75.0" text="Fecha" />
@@ -24,13 +24,13 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <HBox alignment="CENTER_LEFT" layoutX="40.0" layoutY="40.0" prefHeight="24.0" prefWidth="683.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox alignment="CENTER_LEFT" layoutX="40.0" layoutY="40.0" prefHeight="36.0" prefWidth="683.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label text="Fecha registro" />
-            <DatePicker fx:id="dtpFecha" />
-            <Label text="Placa" />
+            <Label styleClass="input-label" text="Fecha registro" />
+            <DatePicker fx:id="dtpFecha" editable="false" />
+            <Label styleClass="input-label" text="Placa" />
             <TextField fx:id="txtCarRegist" />
-            <Button mnemonicParsing="false" onAction="#fillTable" text="Filtrar" />
+            <Button mnemonicParsing="false" onAction="#fillTable" styleClass="default-button" text="Filtrar" />
          </children>
       </HBox>
    </children>
